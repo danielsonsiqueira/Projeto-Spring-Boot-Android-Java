@@ -1,0 +1,55 @@
+Este projeto consiste em uma API desenvolvida em Spring Boot que tem a função de receber
+solicitações do aplicativo Android para interagir com um banco de dados. Através de endpoints
+definidos, o aplicativo Android pode realizar operações de leitura, escrita, atualização e
+exclusão (CRUD) nos dados armazenados no banco de dados.
+
+Funcionalidades
+A API oferece as seguintes funcionalidades para integração com o aplicativo Android:
+
+Cadastro de Dados: O aplicativo Android pode enviar solicitações para cadastrar novos dados
+no banco de dados, como registros de usuários, produtos, ou qualquer outra informação relevant
+para o aplicativo.
+
+Recuperação de Dados: A API fornece endpoints que permitem que o aplicativo Android recupere dados
+específicos do banco de dados, seja para exibir informações detalhadas ou para preencher formulários
+e interfaces de usuário.
+
+Atualização de Dados: Os dados existentes no banco de dados podem ser atualizados através de
+solicitações enviadas pelo aplicativo Android. Isso permite que os usuários modifiquem informações
+conforme necessário.
+
+Exclusão de Dados: O aplicativo Android pode enviar solicitações para excluir dados do banco de
+dados, removendo registros que não são mais necessários ou que foram cadastrados erroneamente.
+
+- - - Endpoints Disponíveis - - -
+A API define os seguintes endpoints para interação com o aplicativo Android:
+
+GET: Retorno de dados.
+POST: Cadastra um novo dado.
+PUT: Atualiza um dado.
+DELETE: Exclui um dado.
+
+- - - Configuração - - -
+
+nas propriedades do aplicativo (application.properties) voce irá configurar da seguinte maneira:
+
+//informe o local do seu banco de dados
+spring.datasource.url=jdbc:mysql://127.0.0.1:3306/seubancodedados?createDatabaseIfNotExist=true
+
+//Essa configuração de exemplo indica ao Spring Boot que deve usar o dialeto MySQL do
+//Hibernate para gerar consultas SQL otimizadas, garantindo compatibilidade
+//e eficiência ao interagir com o banco de dados MySQL.
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
+
+//informações de usuario utilizado para autenticar no banco de dados.
+spring.datasource.username=root
+spring.datasource.password=36855863@#
+
+//Essa configuração permite que o Hibernate atualize automaticamente o
+//esquema do banco de dados conforme as mudanças no código do aplicativo,
+//criando tabelas se não existirem e atualizando o esquema conforme necessário.
+spring.jpa.hibernate.ddl-auto=update
+
+//Essa configuração define a porta em que o servidor embutido do Spring Boot irá procurar
+//por solicitações HTTP (defina a mesma porta no app android)
+server.port=8080

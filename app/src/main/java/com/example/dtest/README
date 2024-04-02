@@ -1,0 +1,56 @@
+Este aplicativo foi criado com a principal intenção de enviar dados para endpoints de uma
+API Spring Boot que por fim se comunicará com um banco de dados que suporta SQL.
+
+Será utilizada a biblioteca Retrofit para simplificar o processo de comunicação com
+a API Spring Boot.
+
+Recomendo que você já tenha conhecimendo prévio sobre banco de dados, Spring Boot e Retrofit.
+
+Breve descrição desse projeto Android:
+
+- - - Arquitetura do Aplicativo - - -
+
+O aplicativo segue uma arquitetura que enfatiza a modularidade, a separação de preocupações
+e a escalabilidade. Abaixo está uma descrição dos principais componentes e como eles se relacionam:
+
+- - - Modelos (Models) - - -
+
+Os modelos representam a estrutura de dados do aplicativo e contêm informações sobre
+entidades específicas, como Pessoa, Produto ou qualquer outra entidade relevante para o domínio do
+aplicativo (Neste aplicativo é usado a entidade Pessoa como exemplo). Cada modelo é definido com
+um construtor para inicializar seus atributos,
+além de getters, setters e o método toString() para facilitar a depuração e a representação textual.
+
+- - - Pacote Retrofit (biblioteca) - - -
+
+O pacote Retrofit contém classes responsáveis pela comunicação com a API Spring Boot. Isso inclui:
+
+Inicialização do Retrofit: Uma classe que inicializa a instância do Retrofit com as configurações
+necessárias, como URL base e conversores de dados.
+Solicitações HTTP: Cada classe dentro deste pacote representa uma solicitação específica à API, como
+obter todos os dados, salvar um novo registro, atualizar um registro existente ou excluir um
+registro. Essas classes encapsulam a lógica de comunicação com a API usando Retrofit.
+
+- - - Adaptador (Adapter) com RecyclerView e Activity de entrada e saída de dados - - -
+
+O adaptador é responsável por vincular os dados do modelo à interface do usuário usando um
+RecyclerView. Ele adapta os dados dos modelos para serem exibidos corretamente na interface do
+usuário e permite que os usuários visualizem e interajam com a lista de itens. O adaptador
+juntamente com a Activity responsável pela entrada de valores (EntradaValoresActivity) podem ser
+usados para visualizar, criar, atualizar e excluir itens da lista, conforme necessário
+(Operações CRUD: Create, Read, Update, Delete).
+
+- - - Responsividade e Organização - - -
+
+A interface do usuário é projetada com ConstraintLayout para garantir a responsividade em diferentes
+tamanhos de tela e dispositivos. O XML e as strings são organizados de forma clara e concisa para
+facilitar a manutenção e a localização do aplicativo.
+
+- - - Conclusão - - -
+
+Essa arquitetura permite uma separação clara de responsabilidades entre os diferentes componentes
+do aplicativo, facilitando a manutenção, teste e expansão do código no futuro.
+
+- - - Observações - - -
+
+Este aplicativo poderá ser atualizado em breve para melhorias.

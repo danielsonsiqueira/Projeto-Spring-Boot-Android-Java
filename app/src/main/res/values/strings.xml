@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">D Test</string>
+
+    <!--MainActivity-->
+
+    <string name="sInicio">Início</string>
+    <string name="sBtnPessoas">Pessoas</string>
+
+    <!--EntradaValoresActivity e list_pessoa_item.xml-->
+
+    <string name="sEntradaValores">Adicionar Valores</string>
+    <string name="sTxtHintNome">Nome</string>
+    <string name="sTxtHintLocal">Local</string>
+    <string name="sTxtHintTipo">Tipo</string>
+    <string name="sBtnEnviar">Enviar</string>
+    <string name="sExcluir">Excluir</string>
+
+</resources>

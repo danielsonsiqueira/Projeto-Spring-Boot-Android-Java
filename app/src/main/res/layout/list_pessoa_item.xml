@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_item_lista"
+    android:padding="10dp"
+    android:layout_margin="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:layout_margin="20dp"
+        android:text="@string/sTxtHintNome"
+        android:maxLength="30"
+        android:textColor="@color/colorText"
+        android:id="@+id/pessoaListItemNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:layout_margin="20dp"
+        android:text="@string/sTxtHintLocal"
+        android:textColor="@color/colorText"
+        android:maxLength="30"
+        android:id="@+id/pessoaListItemLocal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pessoaListItemNome"/>
+
+    <TextView
+        android:layout_margin="20dp"
+        android:text="@string/sTxtHintTipo"
+        android:textColor="@color/colorText"
+        android:maxLength="30"
+        android:id="@+id/pessoaListItemTipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pessoaListItemLocal"/>
+
+    <Button
+        android:text="@string/sExcluir"
+        android:textAllCaps="false"
+        android:id="@+id/btnExcluir"
+        android:textColor="@color/colorText"
+        android:background="@drawable/bg_btn_item_lista"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/pessoaListItemTipo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="5dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
